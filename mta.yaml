@@ -1,0 +1,17 @@
+_schema-version: "3.2"
+ID: Atualizacao_de_Rotas
+version: 0.0.1
+modules:
+- name: atualizacao_rotas_wf
+  type: com.sap.application.content
+  path: atualizacao_rotas_wf
+  requires:
+  - name: workflow
+    parameters:
+      content-target: true
+resources:
+- name: workflow
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: workflow
+    service-plan: standard
